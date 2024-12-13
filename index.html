@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="folio.css">
+    <title> Martinez Portfolio </title>
+</head>
+<body>
+    <header id="header">
+        <h2 id="titre">Lucas Martinez</h2>
+        <nav>
+            <ul id="nav">
+                <li class="navi"><a href="#accueil">Accueil</a></li>
+                <li class="navi"><a href="#propos"> À propos</a></li>
+                <li class="navi"><a href="#service">Service</a></li>
+                <li class="navi"><a href="#folio">Portfolio</a></li>
+                <li class="navi"><a href="#blog"> Blog</a></li>
+                <li class="navi"><a href="#contact"> Contact</a></li>
+            </ul>
+        </nav>
+        <h1 id="text1"> Bienvenue <br> sur cette magnifique page web </h1>
+    </header>
+
+    <section id="propos">
+        <div class="contpropos">
+            <div class="left-column">
+                <img id ="image2" src="Image/Image2.webp" alt="image de oim" width="200">
+            </div>
+            <div class="right-column">
+                <h2 id="p1">À propos</h2>
+                <p id="p2">Enchanté, je suis un développeur web autodidacte, et j’espère pouvoir vous fournir le site web qui vous conviendra le mieux. Peu importe que vous ayez une idée bien précise de votre site ou que vous ne sachiez pas encore à quoi il devrait ressembler. Vous pouvez me contacter dès maintenant pour en discuter ensemble.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="service">
+        <h1 class="titredepage">Service</h1>
+            
+        <div class="card-container">
+            <!-- Carte 1 -->
+            <div class="card">
+                <div class="card-face card-front"><p>Carte 1</p></div>
+                <div class="card-face card-back"><p>Retour 1</p></div>
+            </div>
+            <!-- Carte 2 -->
+            <div class="card">
+                <div class="card-face card-front"><p>Carte 2</p></div>
+                <div class="card-face card-back"><p>Retour 2</p></div>
+            </div>
+            <!-- Carte 3 -->
+            <div class="card">
+                <div class="card-face card-front"><p>Carte 3</p></div>
+                <div class="card-face card-back"><p>Retour 3</p></div>
+              </div>
+              <!-- Carte 4 -->
+            <div class="card">
+                <div class="card-face card-front"><p>Carte 4</p></div>
+                <div class="card-face card-back"><p>Retour 4</p></div>
+             </div>
+            <!-- Carte 5 -->
+            <div class="card">
+                <div class="card-face card-front"><p>Carte 5</p></div>                    <div class="card-face card-back"><p>Retour 5</p></div>
+            </div>
+            <!-- Carte 6 -->
+            <div class="card">
+                <div class="card-face card-front"><p>Carte 6</p></div>
+                <div class="card-face card-back"><p>Retour 6</p></div>
+            </div>
+        
+            <script>
+                var cards = document.querySelectorAll('.card');
+                cards.forEach(function(card) {
+                    card.addEventListener('click', function() {
+                        card.classList.toggle('flip');
+                    });
+                });
+            </script>
+    
+        </section>
+
+    <section class="folio-section" id="folio">
+        <h1 class="titredepage">Portfolio</h1>
+        <div class="folio-text">
+            <p id="folio">Bienvenue dans notre galerie</p>
+        </div>
+        <div class="folio-content">
+            <img id="folio-img" src="Image/Image2.webp" alt="projet personnel">
+            <p id="folio-description">Description de l'image 1</p>
+        </div>
+
+
+        <script>
+            // Tableau des images et descriptions
+            const items = [
+                { src: "Image/Image2.webp", description: "Description de l'image 1" },
+                { src: "Image/Image3.webp", description: "Description de l'image 2" },
+                { src: "Image/Image4.webp", description: "Description de l'image 3" },
+                { src: "Image/Image5.webp", description: "Description de l'image 4" }
+            ];
+    
+            let currentIndex = 0;
+            const imageElement = document.getElementById("folio-img");
+            const descriptionElement = document.getElementById("folio-description");
+    
+            imageElement.addEventListener("click", () => {
+                // Passer à l'image suivante
+                currentIndex = (currentIndex + 1) % items.length;
+                imageElement.src = items[currentIndex].src;
+                descriptionElement.textContent = items[currentIndex].description;
+            });
+        </script>
+          
+    </section>
+
+    <section id="blog">
+        <h1 class="titredepage" id="blog-titre">Notre Blog</h1>
+        <div class="blog-content">
+            <!-- Article 1 -->
+            <article class="blog-article">
+                <img src="Image/Article1.jpg" alt="Article 1" class="blog-image">
+                <h2 class="blog-title">Titre de l'article 1</h2>
+                <p class="blog-excerpt">Découvrez les secrets d'un développement web moderne et efficace.</p>
+                <a href="#" class="blog-button">Lire la suite</a>
+            </article>
+    
+            <!-- Article 2 -->
+            <article class="blog-article">
+                <img src="Image/Article2.jpg" alt="Article 2" class="blog-image">
+                <h2 class="blog-title">Titre de l'article 2</h2>
+                <p class="blog-excerpt">5 astuces pour améliorer votre design UX/UI en 2024.</p>
+                <a href="#" class="blog-button">Lire la suite</a>
+            </article>
+    
+            <!-- Article 3 -->
+            <article class="blog-article">
+                <img src="Image/Article3.jpg" alt="Article 3" class="blog-image">
+                <h2 class="blog-title">Titre de l'article 3</h2>
+                <p class="blog-excerpt">Comment créer un site responsive adapté à tous les écrans ?</p>
+                <a href="#" class="blog-button">Lire la suite</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="titredepage">Contactez-nous</h2>
+        
+        <form class="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+        
+        <div class="contact-info">
+            <p><span class="icon">📍</span> Adresse : troisième porte à droite</p>
+            <p><span class="icon">📧</span> Email : jesais@lala.com</p>
+            <p><span class="icon">📞</span> Téléphone : 00 00 00 00 07</p>
+        </div>
+    </section>
+        
+        <p></p>
+    </section>
+</body>
+</html>
